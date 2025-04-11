@@ -742,12 +742,12 @@
                 <a href="https://github.com/onethirteenco/link-in-bio" class="github-status" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-github"></i>
                     <span>View Source</span>
+                    <div class="github-badges">
+                        <img class="github-badge" src="https://img.shields.io/github/stars/onethirteenco/link-in-bio?style=flat-square&color=6680D8" alt="GitHub stars">
+                        <img class="github-badge" src="https://img.shields.io/github/forks/onethirteenco/link-in-bio?style=flat-square&color=6680D8" alt="GitHub forks">
+                        <img class="github-badge" src="https://img.shields.io/github/actions/workflow/status/onethirteenco/link-in-bio/main.yml?branch=main&style=flat-square" alt="Build status">
+                    </div>
                 </a>
-                <div class="github-badges">
-                    <img class="github-badge" src="https://img.shields.io/github/stars/onethirteenco/link-in-bio?style=flat-square&color=6680D8" alt="GitHub stars">
-                    <img class="github-badge" src="https://img.shields.io/github/forks/onethirteenco/link-in-bio?style=flat-square&color=6680D8" alt="GitHub forks">
-                    <img class="github-badge" src="https://img.shields.io/github/actions/workflow/status/onethirteenco/link-in-bio/main.yml?branch=main&style=flat-square" alt="Build status">
-                </div>
             </div>
             <div class="nav-right">
                 <button class="theme-toggle" aria-label="Toggle theme">
@@ -908,13 +908,11 @@
         setTheme(getTheme());
         
         // Toggle theme on button click
-        if (themeToggle) {
-            themeToggle.addEventListener('click', () => {
-                const currentTheme = getTheme();
-                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-                setTheme(newTheme);
-            });
-        }
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = getTheme();
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+        });
 
         // Listen for system theme changes
         if (prefersDarkScheme) {
