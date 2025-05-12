@@ -12,7 +12,6 @@ A modern, responsive, and customizable link-in-bio page built with HTML, CSS, an
 - 🎭 **Modern Design** - Clean, minimalist interface with smooth animations
 - 🔗 **Customizable Links** - Easy to add, remove, or modify links
 - 🌐 **Social Integration** - Direct links to social media platforms
-- 📱 **App Showcase** - Dedicated section for showcasing apps and projects
 
 ## Tech Stack
 
@@ -41,7 +40,21 @@ git clone https://github.com/onethirteenco/link-in-bio.git
 cd link-in-bio
 ```
 
-3. Open `link-in-bio.html` in your browser or serve it using a local server.
+3. Open `index.html` in your browser or serve it using a local server.
+
+### Important Note for Forking
+
+This repository includes a CNAME file for GitHub Pages configuration. When forking this repository:
+
+1. **Remove or Update the CNAME File**
+   - Delete the CNAME file if you don't plan to use a custom domain
+   - Or update it with your own custom domain if you have one
+
+2. **GitHub Pages Setup**
+   - Your site will be available at `username.github.io/link-in-bio` by default
+   - If using a custom domain, configure it in your fork's Settings > Pages
+
+For detailed instructions on forking and contributing, please see [CONTRIBUTING.md](.github/CONTRIBUTING.md).
 
 ### Customization
 
@@ -71,13 +84,7 @@ cd link-in-bio
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Contributions are welcome! Please feel free to submit a Pull Request. For detailed instructions on how to contribute, please see [CONTRIBUTING.md](.github/CONTRIBUTING.md).
 
 ## License
 
@@ -93,4 +100,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 One Thirteen - [@onethirteen_co](https://x.com/onethirteen_co)
 
-Project Link: [https://github.com/onethirteenco/link-in-bio](https://github.com/onethirteenco/link-in-bio) 
+Project Link: [https://github.com/onethirteenco/link-in-bio](https://github.com/onethirteenco/link-in-bio)
+
+### Disclaimer
+This README file was generated with AI and edited by a human.
