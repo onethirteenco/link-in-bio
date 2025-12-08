@@ -2,7 +2,7 @@
 
 A modern, responsive, and customizable link-in-bio page built with HTML, CSS, and JavaScript. This project serves as a central hub for One Thirteen's online presence, featuring links to various platforms, apps, and social media.
 
-![One Thirteen Link-in-Bio](img/screenshot.png)
+![One Thirteen Link-in-Bio](/img/screenshot.png)
 
 ## Features
 
