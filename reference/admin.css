@@ -1,0 +1,1353 @@
+.admin-shell {
+    min-height: 100vh;
+}
+
+.admin-main {
+    width: 100%;
+    padding-top: clamp(2rem, 5vw, 3.5rem);
+    padding-bottom: clamp(3rem, 6vw, 4.5rem);
+}
+
+.admin-content {
+    width: 100%;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.admin-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.admin-header {
+    margin-bottom: 1.5rem;
+}
+
+.admin-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.25rem;
+}
+
+.admin-topbar h1,
+.admin-card h2,
+.admin-list-panel h2,
+.admin-editor-panel h2,
+.admin-preview h3 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.025em;
+    color: var(--text-color);
+}
+
+.admin-topbar h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.08;
+    font-weight: 700;
+}
+
+.admin-breadcrumb {
+    margin: 0 0 0.65rem;
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.admin-breadcrumb a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.admin-breadcrumb a:hover {
+    color: var(--brand-primary);
+}
+
+.admin-subtitle {
+    max-width: 44rem;
+    margin: 0.45rem 0 0;
+    font-size: 0.96rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.admin-toolbar-actions,
+.admin-toolbar-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.55rem;
+}
+
+.admin-user-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.45rem 0.8rem;
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-full);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    background: var(--card-bg);
+}
+
+.admin-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0 0 1.25rem;
+}
+
+.admin-nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: var(--radius-full);
+    border: 1px solid transparent;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.admin-nav-link:hover {
+    color: var(--text-color);
+    background: var(--card-bg-hover);
+}
+
+.admin-nav-link.is-active {
+    color: var(--text-color);
+    background: var(--card-bg);
+    border-color: var(--card-border);
+}
+
+.admin-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.admin-grid--stats {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+.admin-grid--dashboard,
+.admin-grid--editor {
+    grid-template-columns: 1fr;
+}
+
+.admin-grid--focused {
+    gap: 1.5rem;
+}
+
+.admin-card,
+.admin-list-panel,
+.admin-editor-panel,
+.admin-preview {
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border-color);
+    background: transparent;
+    box-shadow: none;
+}
+
+.admin-card--compact {
+    padding-top: 0.9rem;
+}
+
+.admin-card h2,
+.admin-list-panel h2,
+.admin-editor-panel h2,
+.admin-preview h3 {
+    margin: 0;
+    font-size: 1.18rem;
+    font-weight: 600;
+}
+
+.admin-card h3 {
+    margin: 0 0 0.5rem;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.admin-kicker {
+    margin: 0 0 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.admin-stat {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.admin-stat strong {
+    font-family: var(--font-heading);
+    font-size: clamp(1.85rem, 4vw, 2.6rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.admin-muted,
+.admin-tool-meta {
+    color: var(--text-secondary);
+}
+
+.admin-overview-line {
+    margin: 0 0 1.1rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.admin-meta-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.admin-meta-strip strong {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.admin-layout-grid,
+.admin-inline-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.admin-inline-grid--2,
+.admin-inline-grid--3 {
+    grid-template-columns: 1fr;
+}
+
+.admin-inline-grid--meta,
+.admin-inline-grid--app,
+.admin-inline-grid--release {
+    grid-template-columns: 1fr;
+}
+
+.admin-form {
+    display: grid;
+    gap: 1.15rem;
+}
+
+.admin-form--compact {
+    gap: 0.95rem;
+}
+
+.admin-form label,
+.admin-field-label {
+    display: grid;
+    gap: 0.42rem;
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+
+.admin-shell input[type="text"],
+.admin-shell input[type="email"],
+.admin-shell input[type="password"],
+.admin-shell input[type="date"],
+.admin-shell input[type="number"],
+.admin-shell textarea,
+.admin-shell select {
+    width: 100%;
+    padding: 0.78rem 0.85rem;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background: transparent;
+    color: var(--text-color);
+    font: inherit;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+}
+
+.admin-shell textarea {
+    min-height: 132px;
+    resize: vertical;
+}
+
+.admin-shell .admin-textarea--xl {
+    min-height: 280px;
+}
+
+.admin-shell .admin-textarea--writer {
+    min-height: 360px;
+    padding: 1rem 1.05rem;
+    font-size: 0.98rem;
+    line-height: 1.7;
+}
+
+.admin-shell input:focus,
+.admin-shell textarea:focus,
+.admin-shell select:focus {
+    outline: none;
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 0 3px var(--brand-primary-light);
+    background: color-mix(in srgb, var(--card-bg) 55%, transparent);
+}
+
+.admin-checkbox {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--text-color);
+    font-size: 0.92rem;
+}
+
+.admin-checkbox input {
+    width: auto;
+}
+
+.admin-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+}
+
+.admin-actions--flush {
+    padding-top: 0.2rem;
+}
+
+.admin-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.admin-section-heading p {
+    margin: 0.3rem 0 0;
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.admin-list {
+    display: grid;
+}
+
+.admin-list-card,
+.admin-list-item {
+    display: grid;
+    gap: 0.35rem;
+    padding: 0.95rem 0;
+    border-bottom: 1px solid var(--border-color);
+    background: transparent;
+}
+
+.admin-list-card {
+    cursor: pointer;
+    position: relative;
+    transition: color var(--transition-fast), opacity var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.admin-list-card:hover {
+    opacity: 1;
+}
+
+.admin-list-card.is-active {
+    margin-left: -0.85rem;
+    padding-left: calc(0.85rem + 0.7rem);
+    border-left: 2px solid var(--brand-primary);
+    background: color-mix(in srgb, var(--card-bg) 45%, transparent);
+    border-radius: 0 14px 14px 0;
+}
+
+.admin-list-title-row,
+.admin-meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.admin-list-title,
+.admin-list-item .title {
+    font-weight: 600;
+    color: var(--text-color);
+    line-height: 1.35;
+}
+
+.admin-list-summary,
+.admin-list-item .meta {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.admin-badge,
+.state-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 24px;
+    padding: 0.12rem 0.5rem;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--card-border);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.admin-badge--published,
+.state-chip.active {
+    color: #0f9d58;
+    border-color: color-mix(in srgb, #0f9d58 34%, var(--card-border));
+    background: color-mix(in srgb, #0f9d58 10%, transparent);
+}
+
+.admin-badge--draft,
+.state-chip.draft {
+    color: #b45309;
+    border-color: color-mix(in srgb, #b45309 34%, var(--card-border));
+    background: color-mix(in srgb, #b45309 10%, transparent);
+}
+
+.admin-badge--current {
+    color: #2563eb;
+    border-color: color-mix(in srgb, #2563eb 34%, var(--card-border));
+    background: color-mix(in srgb, #2563eb 10%, transparent);
+}
+
+.admin-note {
+    margin: 0 0 1.5rem;
+    padding: 0.8rem 0.95rem;
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    background: var(--card-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.admin-note--error {
+    border-color: color-mix(in srgb, #dc2626 25%, var(--card-border));
+    background: color-mix(in srgb, #dc2626 10%, transparent);
+}
+
+.admin-note--success {
+    border-color: color-mix(in srgb, #16a34a 25%, var(--card-border));
+    background: color-mix(in srgb, #16a34a 10%, transparent);
+}
+
+.admin-note--muted {
+    background: transparent;
+}
+
+.admin-empty,
+.admin-empty-state {
+    padding: 0.8rem 0 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.admin-rail {
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+}
+
+.admin-rail--stacked {
+    gap: 1.25rem;
+}
+
+.admin-rail-group {
+    display: grid;
+    gap: 0.65rem;
+}
+
+.admin-rail-group--nested {
+    padding-top: 0;
+    border-top: 0;
+}
+
+.admin-rail-heading,
+.admin-compose-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+    padding-bottom: 0.2rem;
+}
+
+.admin-compose {
+    gap: 1.2rem;
+}
+
+.admin-compose-form {
+    gap: 1.35rem;
+}
+
+.admin-fieldset {
+    display: grid;
+    gap: 1rem;
+}
+
+.admin-toggle-field {
+    align-content: end;
+    min-height: 100%;
+    padding: 0.82rem 0.95rem;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+.admin-write-split {
+    display: grid;
+    gap: 1.35rem;
+    align-items: start;
+}
+
+.admin-field-label--editor {
+    gap: 0;
+}
+
+.admin-preview--embedded {
+    padding-top: 0;
+    border-top: 0;
+}
+
+.admin-preview-label {
+    padding-bottom: 0.5rem;
+}
+
+.admin-preview-frame {
+    min-height: 100%;
+    padding: 1.1rem 0 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.admin-preview-frame .updates-title,
+.admin-preview-frame .updates-lead,
+.admin-preview-frame .updates-body,
+.admin-preview-frame .updates-date {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.admin-preview-frame .updates-body h2,
+.admin-preview-frame .updates-body h3 {
+    margin: 1.25rem 0 0.55rem;
+}
+
+.admin-preview-frame .updates-body ul {
+    margin: 0 0 1rem 1.1rem;
+}
+
+.admin-table-wrap {
+    overflow: auto;
+}
+
+.admin-shell table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 720px;
+}
+
+.admin-shell th,
+.admin-shell td {
+    padding: 0.85rem 0;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    vertical-align: top;
+}
+
+.admin-shell th {
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.admin-shell .admin-results {
+    max-height: 420px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+.admin-shell .button.secondary {
+    background: transparent;
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+.admin-shell .button--quiet {
+    padding-inline: 0.85rem;
+}
+
+.admin-shell .button.secondary:hover {
+    color: var(--brand-primary);
+    border-color: var(--brand-primary);
+}
+
+.admin-grid--changelog-main {
+    gap: 1.5rem;
+}
+
+.admin-changes-panel {
+    display: grid;
+    gap: 1.4rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.admin-editor-panel--compact {
+    padding-top: 1rem;
+}
+
+@media (min-width: 780px) {
+    .admin-inline-grid--2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .admin-inline-grid--3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .admin-inline-grid--meta {
+        grid-template-columns: minmax(160px, 180px) minmax(0, 1fr) auto;
+        align-items: start;
+    }
+
+    .admin-inline-grid--app {
+        grid-template-columns: minmax(0, 1.1fr) minmax(180px, 0.7fr) minmax(0, 1.2fr) 130px;
+    }
+
+    .admin-inline-grid--release {
+        grid-template-columns: minmax(170px, 0.9fr) minmax(170px, 0.9fr) auto auto;
+        align-items: end;
+    }
+
+    .admin-grid--dashboard {
+        grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+    }
+
+    .admin-write-split {
+        grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.8fr);
+    }
+}
+
+@media (min-width: 980px) {
+    .admin-grid--editor {
+        grid-template-columns: minmax(250px, 300px) minmax(0, 1fr);
+        align-items: start;
+    }
+
+    .admin-list-panel.admin-rail {
+        position: sticky;
+        top: 1.5rem;
+    }
+
+    .admin-changes-panel {
+        grid-template-columns: minmax(240px, 300px) minmax(0, 1fr);
+        gap: 1.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-main {
+        padding-top: 1.5rem;
+    }
+
+    .admin-topbar {
+        flex-direction: column;
+    }
+
+    .admin-rail-heading,
+    .admin-compose-header {
+        align-items: center;
+    }
+}
+
+/* ============================================================
+   POST / RELEASE LIST CARDS
+   Used on /admin/updates and /admin/changelog
+   ============================================================ */
+
+.admin-post-list {
+    display: grid;
+    gap: 0;
+}
+
+.admin-post-card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.25rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+    text-decoration: none;
+    color: inherit;
+    transition: background var(--transition-fast);
+}
+
+.admin-post-card:first-child {
+    border-top: 1px solid var(--border-color);
+}
+
+.admin-post-card:hover .admin-post-card-title {
+    color: var(--brand-primary);
+}
+
+.admin-post-card-main {
+    display: grid;
+    gap: 0.3rem;
+    min-width: 0;
+}
+
+.admin-post-card-title {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.35;
+    transition: color var(--transition-fast);
+}
+
+.admin-post-card-excerpt {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.admin-post-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.admin-post-card-app {
+    font-weight: 500;
+    color: var(--brand-primary);
+}
+
+.admin-post-card-slug {
+    font-family: monospace;
+    font-size: 0.82rem;
+}
+
+.admin-post-card-aside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.4rem;
+    flex-shrink: 0;
+    padding-top: 0.1rem;
+}
+
+/* ============================================================
+   APP / RELEASE FILTER PILLS
+   ============================================================ */
+
+.admin-filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0 0 1.25rem;
+}
+
+.admin-filter-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.38rem 0.75rem;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--card-border);
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.admin-filter-pill:hover {
+    background: var(--card-bg-hover);
+    color: var(--text-color);
+}
+
+.admin-filter-pill.is-active {
+    background: var(--card-bg);
+    border-color: var(--brand-primary);
+    color: var(--brand-primary);
+}
+
+/* ============================================================
+   COMPOSE PAGE — immersive full-width document editor
+   Layout: [thin sticky bar] / [writing surface | metadata sidebar]
+   ============================================================ */
+
+/* Compose pages are full-width — no padding on the main wrapper. */
+.compose-page .admin-main {
+    padding: 0;
+}
+
+/* Thin sticky action bar */
+.compose-bar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.6rem 1.5rem;
+    background: color-mix(in srgb, var(--bg-color) 88%, transparent);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border-color);
+    flex-wrap: wrap;
+}
+
+.compose-bar-crumb {
+    margin: 0;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.compose-bar-crumb a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.compose-bar-crumb a:hover {
+    color: var(--brand-primary);
+}
+
+.compose-bar-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    flex-shrink: 0;
+}
+
+/* Thin floating message just below the bar */
+.compose-message-bar {
+    margin: 0;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.88rem;
+}
+
+/* Two-column layout: writing | sidebar */
+.compose-columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: start;
+    min-height: calc(100vh - 48px); /* fill below the bar */
+}
+
+@media (min-width: 860px) {
+    .compose-columns {
+        grid-template-columns: 1fr 256px;
+    }
+}
+
+/* ── Writing surface ── */
+.compose-writing {
+    padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 6vw, 5rem) 6rem;
+}
+
+/* Large editorial title — beats .admin-shell input[type="text"] specificity */
+.admin-shell .compose-title-input {
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    color: var(--text-color);
+    padding: 0;
+    margin: 0 0 1.75rem;
+    outline: none;
+    transition: none;
+}
+
+.admin-shell .compose-title-input::placeholder {
+    color: var(--text-muted);
+}
+
+/* Live editor: no border, just the document surface */
+.compose-writing .md-live-editor {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    min-height: 60vh;
+    font-size: 1.0625rem;  /* matches updates-body */
+    line-height: 1.65;
+}
+
+.compose-writing .md-live-editor.is-empty::before {
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.compose-writing .md-live-editor:focus {
+    border: none;
+    box-shadow: none;
+}
+
+/* ── Metadata sidebar ── */
+.compose-sidebar {
+    border-left: 1px solid var(--border-color);
+    background: var(--bg-subtle);
+    position: sticky;
+    top: 48px;          /* clear the compose-bar */
+    align-self: start;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+}
+
+.compose-sidebar-inner {
+    padding: 0;
+}
+
+.compose-sidebar-section {
+    padding: 1.1rem 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    display: grid;
+    gap: 0.75rem;
+}
+
+.compose-sidebar-section:last-child {
+    border-bottom: none;
+}
+
+.compose-meta-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.compose-sidebar-field {
+    display: grid;
+    gap: 0.3rem;
+}
+
+/* Sidebar inputs — beat .admin-shell input specificity (0,2,1) */
+.admin-shell .compose-sidebar input[type="text"],
+.admin-shell .compose-sidebar input[type="date"],
+.admin-shell .compose-sidebar textarea {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.42rem 0.6rem;
+    font: inherit;
+    font-size: 0.88rem;
+    color: var(--text-color);
+    width: 100%;
+    resize: vertical;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.admin-shell .compose-sidebar input:focus,
+.admin-shell .compose-sidebar textarea:focus {
+    outline: none;
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 0 2px var(--brand-primary-light);
+}
+
+.compose-sidebar-danger {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.compose-delete-btn {
+    width: 100%;
+    justify-content: center;
+    color: #ef4444;
+    border-color: color-mix(in srgb, #ef4444 30%, var(--border-color));
+}
+
+.compose-delete-btn:hover:not(:disabled) {
+    color: #ef4444;
+    border-color: #ef4444;
+    background: color-mix(in srgb, #ef4444 8%, transparent);
+}
+
+/* Mobile: stack sidebar below editor */
+@media (max-width: 859px) {
+    .compose-sidebar {
+        position: static;
+        max-height: none;
+        border-left: none;
+        border-top: 1px solid var(--border-color);
+    }
+
+    .compose-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* ============================================================
+   RELEASE PAGE — metadata grid + changes
+   ============================================================ */
+
+/* Wide document wrapper below the compose-bar */
+.release-page-doc {
+    max-width: 860px;
+    padding: clamp(1.5rem, 4vw, 3rem) clamp(1.5rem, 5vw, 4rem) 5rem;
+}
+
+.release-form {
+    margin-bottom: 2rem;
+}
+
+.release-meta-grid {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: 1fr;
+    margin-bottom: 1rem;
+}
+
+.release-meta-field {
+    display: grid;
+    gap: 0.3rem;
+}
+
+.release-meta-field.admin-toggle-field {
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 0.65rem 0.85rem;
+}
+
+.admin-shell .release-meta-field input[type="text"],
+.admin-shell .release-meta-field input[type="date"],
+.admin-shell .release-meta-field select {
+    width: 100%;
+    padding: 0.72rem 0.85rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background: transparent;
+    color: var(--text-color);
+    font: inherit;
+    font-size: 0.93rem;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.admin-shell .release-meta-field input:focus,
+.admin-shell .release-meta-field select:focus {
+    outline: none;
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 0 3px var(--brand-primary-light);
+}
+
+@media (min-width: 640px) {
+    .release-meta-grid {
+        grid-template-columns: minmax(150px, 1fr) minmax(140px, 0.9fr) minmax(170px, 1fr) auto;
+        align-items: end;
+    }
+}
+
+/* Changes section */
+.changes-section {
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.changes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.changes-header h2 {
+    margin: 0;
+    font-size: 1.18rem;
+    font-weight: 600;
+    font-family: var(--font-heading);
+    color: var(--text-color);
+}
+
+.change-list {
+    display: grid;
+    gap: 0;
+}
+
+.change-card {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.change-card:first-child {
+    border-top: 1px solid var(--border-color);
+}
+
+.change-card-row {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    flex-wrap: wrap;
+}
+
+.change-card-reorder {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    margin-right: 0.15rem;
+}
+
+.change-card-move {
+    min-width: 2rem;
+    padding: 0.2rem 0.35rem !important;
+    font-size: 0.85rem;
+    line-height: 1;
+}
+
+.change-card-move:disabled {
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+.admin-pro-badge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.45rem;
+    border-radius: 999px;
+    color: #fbbf24;
+    background: rgba(251, 191, 36, 0.12);
+    border: 1px solid rgba(251, 191, 36, 0.35);
+}
+
+[data-theme="light"] .admin-pro-badge {
+    color: #b45309;
+    background: rgba(251, 191, 36, 0.18);
+    border-color: rgba(180, 83, 9, 0.28);
+}
+
+.change-pro-field {
+    margin-top: 0.5rem;
+}
+
+.change-card-title {
+    flex: 1;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.change-card-edit {
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+}
+
+.change-card:hover .change-card-edit {
+    opacity: 1;
+}
+
+.change-editor-card {
+    margin-top: 1.25rem;
+    padding: 1.25rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    background: var(--card-bg);
+}
+
+/* ============================================================
+   OBSIDIAN-STYLE LIVE MARKDOWN EDITOR (contenteditable)
+   Headings render larger, **bold** renders bold, *italic* italic —
+   exactly like Obsidian's Live Preview. Cursor is browser-managed
+   so it aligns perfectly with rendered formatting.
+   ============================================================ */
+
+.md-live-host {
+    /* wrapper injected by createEditor() */
+    display: block;
+}
+
+.md-live-editor {
+    position: relative; /* anchors the ::before placeholder */
+    min-height: 420px;
+    padding: 1.1rem 1.3rem;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    color: var(--text-color);
+    font-family: var(--font-body);
+    font-size: 0.97rem;
+    line-height: 1.78;
+    outline: none;
+    cursor: text;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.md-live-editor:focus {
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 0 3px var(--brand-primary-light);
+}
+
+/* Placeholder — positioned absolutely so it overlays the single empty div */
+.md-live-editor.is-empty::before {
+    content: attr(data-placeholder);
+    position: absolute;
+    top: 1.1rem;
+    left: 1.3rem;
+    right: 1.3rem;
+    color: var(--text-muted);
+    pointer-events: none;
+    white-space: pre-wrap;
+    line-height: 1.78;
+}
+
+/* All lines */
+.md-live-editor .md-line {
+    min-height: 1.78em; /* = 1lh; prevents empty lines from collapsing */
+}
+
+/* Headings — actually render bigger, like Obsidian */
+.md-live-editor .md-h1-line {
+    font-size: 1.55em;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.25;
+    margin: 0.45em 0 0.1em;
+}
+
+.md-live-editor .md-h2-line {
+    font-size: 1.25em;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    line-height: 1.35;
+    margin: 0.35em 0 0.05em;
+}
+
+.md-live-editor .md-h3-line {
+    font-size: 1.1em;
+    font-weight: 600;
+    line-height: 1.45;
+    margin: 0.25em 0 0.05em;
+}
+
+.md-live-editor .md-h1-text { color: var(--text-color); }
+.md-live-editor .md-h2-text { color: #cbd5e1; }
+.md-live-editor .md-h3-text { color: #94a3b8; }
+
+/* # / ## / ### markers — dimmed & smaller so heading text stands out */
+.md-live-editor .md-hmark {
+    color: var(--brand-primary);
+    opacity: 0.65;
+    font-size: 0.6em;
+    vertical-align: middle;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+/* Inline syntax punctuation (**  *  `  [  ]  etc.) */
+.md-live-editor .md-s {
+    color: var(--text-muted);
+    opacity: 0.55;
+    font-size: 0.85em;
+}
+
+/* Inline formatting */
+.md-live-editor .md-strong { color: var(--text-color); }
+.md-live-editor .md-em     { color: #a5b4fc; font-style: italic; }
+
+.md-live-editor .md-code {
+    font-family: 'Menlo', 'Consolas', 'JetBrains Mono', monospace;
+    font-size: 0.88em;
+    color: var(--brand-secondary);
+    background: color-mix(in srgb, var(--brand-secondary) 12%, transparent);
+    border-radius: 4px;
+    padding: 0.05em 0.3em;
+}
+
+/* List markers */
+.md-live-editor .md-bullet {
+    color: var(--brand-primary);
+    font-weight: 600;
+    user-select: none;
+}
+
+/* Links */
+.md-live-editor .md-link {
+    color: var(--brand-primary-hover);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+.md-live-editor .md-url {
+    color: var(--text-muted);
+    opacity: 0.65;
+    font-size: 0.88em;
+}
+
+/* HR */
+.md-live-editor .md-hr-line { color: var(--text-muted); }
+
+/* Light theme overrides */
+[data-theme="light"] .md-live-editor .md-h2-text { color: #1e293b; }
+[data-theme="light"] .md-live-editor .md-h3-text { color: #334155; }
+[data-theme="light"] .md-live-editor .md-em      { color: #4f46e5; }
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .compose-topbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .compose-topbar-actions {
+        align-self: flex-end;
+    }
+
+    .compose-meta-bar {
+        flex-direction: column;
+    }
+
+    .compose-meta-field--wide,
+    .compose-meta-field--grow {
+        flex: unset;
+    }
+}
